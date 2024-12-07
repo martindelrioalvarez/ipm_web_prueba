@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #FF7F50, #FF4500); /* Degradado naranja */
-    color: #333;
+    color: #222; /* Contraste más alto */
 }
 
 /* Cabecera */
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95); /* Más opaco para mayor contraste */
     text-align: center;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -18,17 +18,18 @@ header {
 .header-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #FF4500; /* Naranja oscuro */
+    color: #D84315; /* Naranja oscuro con mayor contraste */
     margin: 0;
 }
 
 /* Contenedor principal */
 main {
     margin: 1rem;
-    background-color: white;
+    background-color: #FFF;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #222; /* Mayor contraste con fondo blanco */
 }
 
 /* Formularios */
@@ -41,7 +42,7 @@ form {
 }
 
 fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid #CCC; /* Borde con mejor contraste */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,7 +51,7 @@ fieldset {
 legend {
     font-size: 1rem;
     font-weight: bold;
-    color: #FF4500;
+    color: #D84315; /* Color con mayor contraste */
     padding: 0 0.5rem;
 }
 
@@ -65,23 +66,25 @@ legend {
 
 .patient-selection label {
     font-weight: bold; /* Ajuste para texto en negrita */
-    color: #333;
+    color: #222; /* Contraste más fuerte */
 }
 
 input[type="text"] {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #CCC; /* Mejora de contraste en el borde */
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
     box-sizing: border-box;
+    background: #FFF; /* Fondo claro para contraste */
+    color: #222;
 }
 
 input[type="text"]:focus {
-    border-color: #FF4500;
-    box-shadow: 0 0 4px rgba(255, 69, 0, 0.5);
+    border-color: #D84315; /* Borde con alto contraste */
+    box-shadow: 0 0 4px rgba(216, 67, 21, 0.5);
 }
 
 /* Botones radio */
@@ -98,24 +101,24 @@ input[type="text"]:focus {
 .time-selection label {
     padding: 0.8rem 1rem;
     border-radius: 8px;
-    background: #FFE4B5;
-    color: #FF4500;
+    background: #FFDAB9; /* Fondo con mejor contraste */
+    color: #222; /* Texto oscuro para contraste */
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 2px solid #CCC; /* Borde visible */
     transition: all 0.3s ease;
 }
 
 .time-selection input[type="radio"]:checked + label {
-    background: #FF4500;
-    color: white;
+    background: #D84315; /* Fondo oscuro para mayor contraste */
+    color: #FFF; /* Texto blanco para contraste */
     border-color: #FF7F50;
-    box-shadow: 0 2px 6px rgba(255, 69, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(216, 67, 21, 0.3);
 }
 
 .time-selection label:hover {
-    background: #FFDAB9;
+    background: #FFAB91; /* Fondo con contraste aceptable */
 }
 
 /* Selector de fechas */
@@ -127,7 +130,7 @@ input[type="text"]:focus {
     border-radius: 8px;
     background: #FFF5EE; /* Fondo ligeramente naranja */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #FF4500; /* Borde naranja */
+    border: 1px solid #D84315; /* Borde con contraste */
 }
 
 /* Input de tipo date */
@@ -135,41 +138,30 @@ input[type="date"] {
     appearance: none; /* Quita el estilo predeterminado */
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #CCC; /* Borde con mayor contraste */
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
-    background: #FFE4B5; /* Fondo similar a los botones */
-    color: #333;
+    background: #FFF; /* Fondo blanco */
+    color: #222;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     position: relative;
 }
 
 input[type="date"]::placeholder {
-    color: #999;
+    color: #666; /* Mayor contraste */
     font-style: italic;
 }
 
 input[type="date"]:focus {
-    border-color: #FF4500;
-    box-shadow: 0 0 4px rgba(255, 69, 0, 0.5);
-}
-
-/* Icono del calendario */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #FF4500;
-    background-color: transparent;
+    border-color: #D84315; /* Color con alto contraste */
+    box-shadow: 0 0 4px rgba(216, 67, 21, 0.5);
 }
 
 /* Botón de consulta */
 #submit-button {
-    background: #FF4500;
+    background: #D84315; /* Color con alto contraste */
     color: white;
     padding: 0.8rem;
     border: none;
@@ -182,7 +174,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #submit-button:hover {
-    background: #FF7F50;
+    background: #E64A19; /* Color con mejor contraste */
 }
 
 #submit-button:active {
@@ -198,6 +190,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     label {
         font-size: 0.8rem;
     }
+
     input[type="text"], input[type="date"] {
         font-size: 0.9rem;
         padding: 0.6rem;
