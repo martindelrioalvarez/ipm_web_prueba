@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento Sanitario</title>
+    <link rel="stylesheet" href="assets/css/inicioStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Sistema de Seguimiento Sanitario</h1>
+    </header>
+    <main>
+        <section class="report-selection">
+            <h2>Consultar Informes</h2>
+            <form id="report-form" aria-labelledby="form-title">
+                <fieldset class="fieldset-container">
+                    <legend id="form-title">Datos del Informe</legend>
+                    <div class="patient-selection">
+                        <label for="patient-id">Seleccionar Paciente:</label>
+                        <input 
+                            type="text" 
+                            id="patient-id" 
+                            placeholder="Introduce el ID del paciente" 
+                            required 
+                            aria-required="true">
+                    </div>
+                    <fieldset class="time-period-container">
+                        <legend>Seleccione el Período</legend>
+                        <div class="time-selection">
+                            <input type="radio" id="last-month" name="time-period" value="last-month">
+                            <label for="last-month">Último Mes</label>
+                            <input type="radio" id="last-7-days" name="time-period" value="last-7-days">
+                            <label for="last-7-days">Últimos 7 Días</label>
+                            <input type="radio" id="last-15-days" name="time-period" value="last-15-days">
+                            <label for="last-15-days">Últimos 15 Días</label>
+                            <input type="radio" id="custom-period" name="time-period" value="custom-period">
+                            <label for="custom-period">Entre Fechas</label>
+                        </div>
+
+                    </fieldset>
+                    <div id="custom-dates" class="hidden">
+                        <label for="start-date">Fecha de inicio:</label>
+                        <input type="date" id="start-date" name="start-date">
+                        <label for="end-date">Fecha de fin:</label>
+                        <input type="date" id="end-date" name="end-date">
+                    </div>
+                </fieldset>
+                <button type="submit" id="submit-button">Consultar Informe</button>
+            </form>
+        </section>
+    </main>
+    <script src="assets/js/inicioScript.js"></script>
+</body>
+</html>
